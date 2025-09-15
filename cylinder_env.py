@@ -17,7 +17,7 @@ class CustomEnv(gym.Env):
 
         # Action & Observation spaces
         self.action_space = spaces.Box(low=-0.4, high=0.4, shape=(1,), dtype=np.float32)
-        self.history_length = 3
+        self.history_length = 3 # can be any number
         self.observation_space = spaces.Box(low=-np.inf, high=np.inf, 
                                             shape=(2 + self.history_length,),
                                             dtype=np.float32)
